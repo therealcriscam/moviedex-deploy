@@ -20,7 +20,7 @@ app.use(function validateToken(req, res, next) {
   if (!authToken || authToken !== apiToken) {
     return res
       .status(401)
-      .send('Unauthorized request: Must have valid api token.');
+      .send('Unauthorized request: Must have a valid api token.');
   }
   next();
 });
